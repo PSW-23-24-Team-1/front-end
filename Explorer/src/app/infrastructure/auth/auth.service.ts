@@ -43,8 +43,11 @@ export class AuthService {
   }
 
   logout(): void {
-    this.tokenStorage.clear();
-    this.user$.next({username: "", id: 0, role: "" });
+    this.router.navigate(['/home']).then(_ => {
+      this.tokenStorage.clear();
+      this.user$.next({username: "", id: 0, role: "" });
+      }
+    );
   }
 
   checkIfUserExists(): void {

@@ -14,8 +14,6 @@ import { TourExecutionModule } from './feature-modules/tour-execution/tour-execu
 import { AuthModule } from './infrastructure/auth/auth.module';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { JwtInterceptor } from './infrastructure/auth/jwt/jwt.interceptor';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { StakeholderModule } from './feature-modules/stakeholder/stakeholder.module';
 
 @NgModule({
   declarations: [
@@ -33,9 +31,7 @@ import { StakeholderModule } from './feature-modules/stakeholder/stakeholder.mod
     TourAuthoringModule,
     TourExecutionModule,
     AuthModule,
-    HttpClientModule,
-    FontAwesomeModule,
-    StakeholderModule
+    HttpClientModule
   ],
   providers: [
     {
@@ -46,4 +42,4 @@ import { StakeholderModule } from './feature-modules/stakeholder/stakeholder.mod
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
