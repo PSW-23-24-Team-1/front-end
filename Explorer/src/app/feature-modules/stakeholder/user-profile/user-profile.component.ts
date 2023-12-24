@@ -14,6 +14,7 @@ import { TourExecutionHistoryComponent } from "../../tour-execution/tour-executi
 import * as DOMPurify from "dompurify";
 import { marked } from "marked";
 import { Wallet } from "../model/wallet.model";
+import { UserClubsDialogComponent } from "../user-clubs-dialog/user-clubs-dialog.component";
 
 @Component({
     selector: "xp-user-profile",
@@ -124,6 +125,13 @@ export class UserProfileComponent implements OnInit {
         dialogRef.afterClosed().subscribe(item => {
             this.loadFollowings();
             this.loadFollowers();
+        });
+    }
+    openClubsDialog(){
+        this.dialog.open(UserClubsDialogComponent, {
+            data: {
+                userId: this.user.id,
+            },
         });
     }
     goToAllNotifications(): void {

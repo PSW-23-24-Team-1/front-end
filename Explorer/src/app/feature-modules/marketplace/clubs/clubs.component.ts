@@ -4,6 +4,7 @@ import { Club } from '../model/club.model';
 import { MarketplaceService } from '../marketplace.service';
 import { PagedResults } from 'src/app/shared/model/paged-results.model';
 import { User } from 'src/app/infrastructure/auth/model/user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'xp-clubs',
@@ -15,7 +16,7 @@ export class ClubsComponent implements OnInit{
   user: User;
   shouldShowImage: boolean = false
   imgSrc: string = ""
-  constructor(private service: MarketplaceService, private authService: AuthService){}
+  constructor(private service: MarketplaceService, private authService: AuthService, private router: Router){}
   ngOnInit(): void {
     this.authService.user$.subscribe(user => {
       this.user = user;
@@ -42,5 +43,8 @@ export class ClubsComponent implements OnInit{
         console.log(errData)
       }
     })
+  }
+  showClub(id: number){
+    this.router.navigate(["/club/", id]);
   }
 }

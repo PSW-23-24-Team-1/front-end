@@ -1,0 +1,21 @@
+.container {
+    display: flex; /* Use flexbox to create a flexible container */
+  }
+
+  /* Style for the left div */
+  .left-div {
+    flex: 0.7; /* Make the left div take up all available space */
+    padding: 20px; /* Add some padding for spacing */
+    padding-right: 50px;
+  }
+
+  /* Style for the right div */
+  .right-div {
+    flex: 1; /* Make the right div take up all available space */
+  }
+
+  /* Style for the image inside the right div */
+  .right-div img {/* Maintain the aspect ratio of the image */
+    display: block; /* Remove extra space below the image */
+    width: 50%;
+  }

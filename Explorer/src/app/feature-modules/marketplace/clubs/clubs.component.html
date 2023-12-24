@@ -10,6 +10,7 @@
                     <th>Name</th>
                     <th>Description</th>
                     <th>Image</th>
+                    <th>Show</th>
                     <th></th>
                 </tr>
             </thead>
@@ -26,6 +27,11 @@
                     <td>
                         <button *ngIf="user.id != club.ownerId" color="primary" mat-button (click)="sendJoinRequest(club.id !== undefined ? club.id : 0)">
                             Send join request 
+                        </button>
+                    </td>
+                    <td>
+                        <button color="primary" mat-button (click)="showClub(club.id!)">
+                            Show
                         </button>
                     </td>
                 </tr>
