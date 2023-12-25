@@ -1,5 +1,5 @@
 export interface ClubMember {
-    id: number,
+    userId: number,
     firstName: string,
     lastName: string,
     username: string,

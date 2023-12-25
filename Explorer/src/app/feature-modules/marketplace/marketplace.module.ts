@@ -45,6 +45,8 @@ import { CouponsModalComponent } from "./coupons-modal/coupons-modal.component";
 import { ExploreBundlesComponent } from './explore-bundles/explore-bundles.component';
 import { StarRatingModule } from 'angular-star-rating';
 import { ClubComponent } from './club/club.component';
+import { ClubMembersDialogComponent } from './club-members-dialog/club-members-dialog.component';
+import { UserClubRowComponent } from './user-club-row/user-club-row.component';
 
 @NgModule({
     declarations: [
@@ -82,6 +84,8 @@ import { ClubComponent } from './club/club.component';
         CouponsModalComponent,
         ExploreBundlesComponent,
         ClubComponent,
+        ClubMembersDialogComponent,
+        UserClubRowComponent,
     ],
     imports: [
         CommonModule,

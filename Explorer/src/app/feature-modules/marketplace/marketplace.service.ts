@@ -207,6 +207,11 @@ export class MarketplaceService {
             environment.apiHost + `tourist/club/members/${clubId}`,
         );
     }
+    getClubMembersWithOwner(clubId: number): Observable<PagedResults<ClubMember>> {
+        return this.http.get<PagedResults<ClubMember>>(
+            environment.apiHost + `tourist/club/members/membersinlcudingowner/${clubId}`,
+        );
+    }
     kickMember(id: number): Observable<ClubMember> {
         const route = environment.apiHost + "tourist/club/members/kick/" + id;
         return this.http.delete<ClubMember>(route);

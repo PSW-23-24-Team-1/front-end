@@ -1,0 +1,16 @@
+<div class="dialog">
+    <div class="title">
+        <h1>Members</h1>
+    </div>
+    <div class="user-container">
+        <xp-user-club-row
+            *ngFor="let f of members"
+            [user]="f.following"
+            [person]="f.followingPerson"
+            [followId]="f.id"
+            [followStatus]="f.followingStatus"
+            (unfollowOrFollowEvent)="unfollowOrFollow($event)"
+            [enableFollow]="true"
+        />
+    </div>
+</div>
